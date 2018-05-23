@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lazy Load Image</title>
+</head>
+
+<style>
+	body {
+		width:  100%;
+		margin:  auto;
+	}
+	div {
+		height:  100vh;
+		width:  100vw;
+		margin-bottom: 3em;
+	}
+	img {
+		display:  block;
+		width: 40em;
+		margin: auto;
+	}
+</style>
+<body>
+
+	<div></div>
+	<img class="lazy" data-src="img/image-1.jpg" width="765" height="574" alt="Test image">
+	<div></div>
+	<div></div>
+	<img class="lazy" data-src="img/image-2.jpg" alt="Test image">
+	<div></div>
+	<img class="lazy" data-src="img/image-3.jpg" alt="Test image">
+	<div></div>
+	<img class="lazy" data-src="img/image-4.jpg" alt="Test image">
+
+
+	<!-- jquery -->
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	
+	<!-- Lazy-loading -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+
+	  <script>
+		$(document).ready(function() {
+			$(".lazy").lazy();
+		});
+	  </script>
+</body>
+</html>
